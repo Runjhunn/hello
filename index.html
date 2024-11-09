@@ -1,14 +1,131 @@
 <!DOCTYPE html>
-<html>
-    <head>
-         <title>gada elctronics</title>
-    </head>
-    <body>
-<<<<<<< HEAD
-        <h1>welcome gada elctronics!</h1>
-=======
-        <h1>gada electronics</h1>
->>>>>>> 86e2a81d4710b9c066e72ac11838cff2198c43a1
-        <h2>new person</h2>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WISHPER WAVES</title>
+    <!-- Make the website mobile-friendly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" onclick="toggleDarkMode()">
+        <img id="dark-mode-icon" src="icons/lightmode.png" alt="Toggle Dark Mode">
+    </button>
+
+    <h1>WISHPER WAVES</h1>
+    
+
+    <div class="sound-container">
+
+        <!-- Rain Sound -->
+        <div id="sound-item-rain" class="sound-item">
+            <img src="images/rain.png" alt="Rain" onclick="toggleSound('rain')">
+            <p>Rain</p>
+            <!-- Volume Slider -->
+            <input type="range" id="volume-rain" class="volume-slider" min="0" max="1" step="0.01" value="1"
+                   oninput="changeVolume('rain', this.value)" onchange="changeVolume('rain', this.value)">
+        </div>
+        <!-- Thunderstorm Sound -->
+        <div id="sound-item-thunder" class="sound-item">
+            <img src="images/thunder.png" alt="Thunderstorm" onclick="toggleSound('thunder')">
+            <p>Thunderstorm</p>
+            <!-- Volume Slider -->
+            <input type="range" id="volume-thunder" class="volume-slider" min="0" max="1" step="0.01" value="1"
+                   oninput="changeVolume('thunder', this.value)" onchange="changeVolume('thunder', this.value)">
+        </div>
+        <!-- Ocean Sound -->
+        <div id="sound-item-ocean" class="sound-item">
+            <img src="images/ocean.png" alt="Ocean" onclick="toggleSound('ocean')">
+            <p>Ocean</p>
+            <!-- Volume Slider -->
+            <input type="range" id="volume-ocean" class="volume-slider" min="0" max="1" step="0.01" value="1"
+                   oninput="changeVolume('ocean', this.value)" onchange="changeVolume('ocean', this.value)">
+        </div>
+        <!-- Forest Sound -->
+        <div id="sound-item-forest" class="sound-item">
+            <img src="images/forest.png" alt="Forest" onclick="toggleSound('forest')">
+            <p>Forest</p>
+            <!-- Volume Slider -->
+            <input type="range" id="volume-forest" class="volume-slider" min="0" max="1" step="0.01" value="1"
+                   oninput="changeVolume('forest', this.value)" onchange="changeVolume('forest', this.value)">
+        </div>
+        <!-- Add more categories here if needed -->
+         <!-- Wind Sound -->
+       <div id="sound-item-wind" class="sound-item">
+            <img src="images/wind.png" alt="Wind" onclick="toggleSound('wind')">
+            <p>Wind</p>
+            <input type="range" id="volume-wind" class="volume-slider" min="0" max="1" step="0.01" value="1"
+                   oninput="changeVolume('wind', this.value)" onchange="changeVolume('wind', this.value)">
+       </div>
+
+         <!-- Campfire Sound -->
+       <div id="sound-item-campfire" class="sound-item">
+            <img src="images/campfire.png" alt="Campfire" onclick="toggleSound('campfire')">
+            <p>Campfire</p>
+            <input type="range" id="volume-campfire" class="volume-slider" min="0" max="1" step="0.01" value="1"
+                  oninput="changeVolume('campfire', this.value)" onchange="changeVolume('campfire', this.value)">
+       </div>
+
+         <!-- Waterfall Sound -->
+       <div id="sound-item-waterfall" class="sound-item">
+           <img src="images/waterfall.png" alt="Waterfall" onclick="toggleSound('waterfall')">
+           <p>Waterfall</p>
+           <input type="range" id="volume-waterfall" class="volume-slider" min="0" max="1" step="0.01" value="1"
+                  oninput="changeVolume('waterfall', this.value)" onchange="changeVolume('waterfall', this.value)">
+       </div>
+                <!-- Bird Chirping Sound -->
+       <div id="sound-item-birds" class="sound-item">
+           <img src="images/birds.png" alt="Bird Chirping" onclick="toggleSound('birds')">
+           <p>Bird Chirping</p>
+           <input type="range" id="volume-birds" class="volume-slider" min="0" max="1" step="0.01" value="1"
+                   oninput="changeVolume('birds', this.value)" onchange="changeVolume('birds', this.value)">
+       </div>
+
+         <!-- Underwater Sound -->
+       <div id="sound-item-underwater" class="sound-item">
+           <img src="images/underwater.jpeg" alt="Underwater" onclick="toggleSound('underwater')">
+           <p>River Flow</p>
+           <input type="range" id="volume-underwater" class="volume-slider" min="0" max="1" step="0.01" value="1"
+                   oninput="changeVolume('underwater', this.value)" onchange="changeVolume('underwater', this.value)">
+       </div>
+
+
+    </div>
+    
+    <div class="corner-palette">
+        <h2>Select Background Color</h2>
+        <div class="color-palette">
+            <button class="color-option" style="background-color: #A8E6CF;" onclick="changeBackgroundColor('#A8E6CF')"></button>
+            <button class="color-option" style="background-color: #FFD3B5;" onclick="changeBackgroundColor('#FFD3B5')"></button>
+            <button class="color-option" style="background-color: #FFAAA6;" onclick="changeBackgroundColor('#FFAAA6')"></button>
+            <button class="color-option" style="background-color: #FF8C94;" onclick="changeBackgroundColor('#FF8C94')"></button>
+        </div>
+    
+        <h2>Select Text Color</h2>
+        <div class="color-palette">
+            <button class="color-option" style="background-color: #2E8B57;" onclick="changeTextColor('#2E8B57')"></button>
+            <button class="color-option" style="background-color: #4682B4;" onclick="changeTextColor('#4682B4')"></button>
+            <button class="color-option" style="background-color: #6A5ACD;" onclick="changeTextColor('#6A5ACD')"></button>
+            <button class="color-option" style="background-color: #FF6347;" onclick="changeTextColor('#FF6347')"></button>
+        </div>
+    </div>
+    <audio id="myAudio" controls>
+        <source src="sound.mp3" type="audio/mp3">
+        <source src="sound.wav" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+      
+    
+        
+
+    <footer>
+        <a href="https://github.com/Runjhunn" target="_blank">Created by Error 609</a>
+    </footer>
+
+    <!-- Include the JavaScript file -->
+    <script src="script.js"></script>
+</body>
 </html>
